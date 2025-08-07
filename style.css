@@ -521,6 +521,7 @@ nav a:hover::after {
   cursor: pointer;
   user-select: none;
   padding: 10px;
+  background-color: #92113c;
 }
 
 /* Responsive styles for phones */
