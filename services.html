@@ -24,13 +24,17 @@
   </header>
 
   <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="book.html">Book</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <section>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav">
+      <a href="index.html" onclick="hideMenu()">Home</a>
+      <a href="about.html" onclick="hideMenu()">About</a>
+      <a href="services.html" onclick="hideMenu()">Services</a>
+      <a href="book.html" onclick="hideMenu()">Book</a>
+      <a href="contact.html" onclick="hideMenu()">Contact</a>
+    </nav>
+    </section>
+
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/919786075139" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i> Whatsapp Chat</a>
@@ -217,6 +221,16 @@
       &copy; All rights reserved.
     </div>
   </footer>
-
+ <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('show');
+    }
+  
+    function hideMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.remove('show');
+    }
+  </script>
 </body>
 </html>

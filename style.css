@@ -169,6 +169,46 @@ h1 {
     height: 160px;
   }
 }
+.carousel-container {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.carousel-track img {
+  height: 220px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 2px 4px 12px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .service-section h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-track img {
+    height: 160px;
+  }
+}
+
 .booking-button {
   display: inline-block;
   background-color: #92113c;
@@ -516,16 +556,16 @@ nav a:hover::after {
 }
 
 .menu-toggle {
-  display: none;
   font-size: 24px;
   cursor: pointer;
   user-select: none;
   padding: 10px;
   background-color: #92113c;
+  max-width: fit-content;
 }
 
 /* Responsive styles for phones */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   #nav {
     display: none;
     flex-direction: column;
