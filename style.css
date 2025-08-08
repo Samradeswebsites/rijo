@@ -808,7 +808,7 @@ nav a:hover::after {
   }
 
   nav a {
-    padding: 4px 0;
+    padding: 15px 0;
     margin: 0;
     width: 100%;
     text-align: center;
@@ -1421,7 +1421,7 @@ nav {
   position: sticky;
   top: 100px; /* Adjust if your header height is more or less */
   z-index: 999;
-  background-color: #fff; /* or any solid color for contrast */
+  background-color: #d63384f; /* or any solid color for contrast */
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -1435,127 +1435,6 @@ nav a {
   color: #d63384;
   font-weight: bold;
 }
-
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  padding-top: 70px; /* to account for fixed header */
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.logo {
-  height: 40px;
-}
-
-.brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.social-icons a {
-  color: #333;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* Nav styles */
-nav {
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 5px 0;
-}
-
-/* ---- MOBILE STYLES ---- */
-@media (max-width: 800px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #d63384;
-
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  nav a {
-    padding: 10px 10px;
-    width: 100%;
-    border-bottom: 1px solid #eee;
-  }
-
-  .social-icons {
-    width: 100%;
-    justify-content: flex-end;
-  }
-}
-
-/* ---- DESKTOP STYLES ---- */
-@media (min-width: 769px) {
-  header {
-    flex-wrap: nowrap;
-  }
-
-  nav {
-    flex: 1;
-    justify-content: flex-end;
-    display: flex !important;
-  }
-
-  .menu-toggle {
-    display: none;
-  }
-}
+#d63384
 
 </style>
