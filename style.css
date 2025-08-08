@@ -462,7 +462,7 @@ nav a {
   position: relative;
   transition: color 0.3s;
   nav {
-    position: fixed; /* or fixed */
+    position: absolute; /* or fixed */
     top: 100%; /* place it below the header */
     left: 0;
     width: 100%;
