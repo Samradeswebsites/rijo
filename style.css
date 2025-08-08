@@ -4,6 +4,114 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
 }
+/* COMMON STYLES (Desktop + Mobile) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  height: 40px;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ✅ MOBILE-ONLY DESIGNS (applies to screens <= 768px) */
+@media (max-width: 768px) {
+  body {
+    background-color: #f9f2f2; /* mobile-only background */
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(45deg, #ffdad5, #fff5e1);
+    border-bottom: 2px solid #e08c7d;
+  }
+
+  .brand {
+    font-size: 1.8rem;
+    color: #c04848;
+  }
+
+  .social-icons {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #c04848;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff0e6;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    padding: 12px 20px;
+    border-bottom: 1px dashed #c04848;
+    color: #c04848;
+  }
+}
+
 
 header {
   position: relative;
