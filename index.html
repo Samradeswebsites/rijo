@@ -10,31 +10,32 @@
 </head>
 <body>
 
-  <!-- Header -->
+<!-- Header -->
 <header>
-    <img src="8.jpg" alt="Logo Left" class="logo">
-    <div class="brand">Rijo</div>
-    <div class="social-icons">
-         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-         <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-         <a href="tel:+919786075139"><i class="fas fa-phone-alt icon"></i></a>
-         <a href="mailto:rijobridalmakeup@gmail.com"><i class="fas fa-envelope icon"></i></a>
-       </div>
-  </header>
+  <img src="8.jpg" alt="Logo Left" class="logo">
+  <div class="brand">Rijo</div>
 
-  <!-- Navigation -->
-  <section>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<nav id="nav">
-  <a href="index.html" onclick="hideMenu()">Home</a>
-  <a href="about.html" onclick="hideMenu()">About</a>
-  <a href="services.html" onclick="hideMenu()">Services</a>
-  <a href="book.html" onclick="hideMenu()">Book</a>
-  <a href="contact.html" onclick="hideMenu()">Contact</a>
-</nav>
-</section>
- 
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="tel:+919786075139"><i class="fas fa-phone-alt icon"></i></a>
+    <a href="mailto:rijobridalmakeup@gmail.com"><i class="fas fa-envelope icon"></i></a>
+
+    <!-- Menu Toggle - only visible on mobile -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <!-- Nav inside header -->
+  <nav id="nav">
+    <a href="index.html" onclick="hideMenu()">Home</a>
+    <a href="about.html" onclick="hideMenu()">About</a>
+    <a href="services.html" onclick="hideMenu()">Services</a>
+    <a href="book.html" onclick="hideMenu()">Book</a>
+    <a href="contact.html" onclick="hideMenu()">Contact</a>
+  </nav>
+</header>
+
 <br>
   <!-- Quote Section -->
   <section class="contact">
@@ -127,6 +128,8 @@
     </div>
   </footer>
   
+
+  
   <script>
     function toggleMenu() {
       const nav = document.getElementById('nav');
@@ -134,11 +137,9 @@
     }
   
     function hideMenu() {
-      const nav = document.getElementById('nav');
-      nav.classList.remove('show');
+      document.getElementById('nav').classList.remove('show');
     }
   </script>
-  
   
 </body>
 </html>
