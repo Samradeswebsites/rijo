@@ -1202,12 +1202,14 @@ footer {
   }
 
   nav a {
-    margin: 10px 15px;
+    margin: 10px 10px;
   }
 
+  .logo {
+    width: auto;
+    height: auto;
+  }
 
-
-  
 
   .founder-image img,
   .logo {
@@ -1266,8 +1268,8 @@ footer {
   }
 
   .logo {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
   }
 
   nav {
