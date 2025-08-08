@@ -8,9 +8,9 @@ body {
 header {
   position: relative;
   display: flex;
-  align-items: center;
+  text-align: center;
   justify-content: space-between;
-  padding: 10px 40px;
+  padding: 10px 20px;
   background-image: url("5.jpg");
   background-size: cover;
   background-position: center;
@@ -24,7 +24,6 @@ header {
   box-sizing: 100%;
   border: 3px solid #fff;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
 }
 .whatsapp-float {
   position: fixed;
@@ -549,43 +548,7 @@ nav a:hover::after {
   
 }
 
-/* Base styles */
-#nav {
-  display: flex;
-  gap: 15px;
-}
 
-.menu-toggle {
-  font-size: 24px;
-  cursor: pointer;
-  user-select: none;
-  padding: 10px;
-  background-color: #92113c;
-  max-width: fit-content;
-}
-
-/* Responsive styles for phones */
-@media (max-width: 800px) {
-  #nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    left: 10px;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 999;
-  }
-
-  #nav.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
 
 
   /* Pre-Footer Section */
