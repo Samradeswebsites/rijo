@@ -133,24 +133,16 @@
       const nav = document.getElementById('nav');
       nav.classList.remove('show');
     }
-  </scrip<script>
-  // Show/hide menu toggle
-  function toggleMenu() {
-    const nav = document.getElementById("nav");
-    nav.classList.toggle("show");
-  }
-
-  // Hide menu when a link is clicked
-  function hideMenu() {
-    document.getElementById("nav").classList.remove("show");
-  }
-
-  // Hide menu on scroll
-  window.addEventListener('scroll', function () {
-    document.getElementById("nav").classList.remove("show");
-  });
-</script>
-t>
-
+    <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('show');
+    }
+  
+    function hideMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.remove('show');
+    }
+  </script>
 </body>
 </html>
