@@ -14,6 +14,7 @@ header {
   background-position: center;
   border-bottom: 3px solid #ffffff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-size: 36px;
 }
 
 .logo {
@@ -479,6 +480,7 @@ nav a {
 
   header {
     padding: 10px; /* reduce header padding */
+    font-size: 306px;
   }
 
   .brand {
@@ -602,6 +604,7 @@ header {
   background-color: white;
   position: sticky;
   top: 0;
+  font-size: 40px;
   z-index: 999;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
