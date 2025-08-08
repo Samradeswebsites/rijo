@@ -327,6 +327,32 @@ h1 {
   color: #ffffff;
   transform: scale(1.05);
 }
+/* Base nav styling */
+nav {
+  position: absolute;
+  top: 100%; /* appear below header */
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 999; /* on top of other content */
+  display: none; /* hidden by default on mobile */
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show menu when toggled */
+nav.show {
+  display: flex;
+}
+
+/* Nav links */
+nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 15px 20px;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
 
 /* Headings (h3) inside contact sections */
 .contacts-grid h3 {
