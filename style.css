@@ -4,114 +4,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
 }
-/* COMMON STYLES (Desktop + Mobile) */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: ;
-  width: 100%;
-  top: 0;
-  z-index: 999;
-}
-
-.logo {
-  height: 40px;
-}
-
-.brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.social-icons a {
-  color: #333;
-  font-size: 1.2rem;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-nav {
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-/* ✅ MOBILE-ONLY DESIGNS (applies to screens <= 768px) */
-@media (max-width: 768px) {
-  body {
-    background-color: #f9f2f2; /* mobile-only background */
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    background: linear-gradient(45deg, #ffdad5, #fff5e1);
-    border-bottom: 2px solid #e08c7d;
-  }
-
-  .brand {
-    font-size: 1.8rem;
-    color: #c04848;
-  }
-
-  .social-icons {
-    width: 100%;
-    justify-content: flex-end;
-    margin-top: 10px;
-  }
-
-  .menu-toggle {
-    display: block;
-    color: #c04848;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #fff0e6;
-    padding: 10px 0;
-    border-top: 1px solid #ccc;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  nav a {
-    padding: 12px 20px;
-    border-bottom: 1px dashed #c04848;
-    color: #c04848;
-  }
-}
-
 
 header {
   position: relative;
@@ -139,7 +31,7 @@ header {
   bottom: 20px;
   right: 20px;
   background-color: #25D366;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 12px 16px;
   border-radius: 50px;
   font-size: 16px;
@@ -152,7 +44,7 @@ header {
 }
 
 .whatsapp-float i {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 h1 {
@@ -671,6 +563,98 @@ nav a:hover::after {
   background-color: #92113c;
   max-width: fit-content;
 }
+/* --- GENERAL STYLES --- */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 50px;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #fefefe;
+  padding: 10px 0;
+  gap: 15px;
+  transition: max-height 0.3s ease;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 15px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #f4f4f4;
+}
+
+/* --- MOBILE-ONLY STYLES --- */
+@media screen and (max-width: 768px) {
+  /* Stack nav links vertically and hide by default */
+  nav {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  nav.show {
+    max-height: 500px; /* enough to show all links */
+  }
+
+  /* Menu toggle button visible only on mobile */
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  /* On desktop, it's hidden */
+  .social-icons {
+    flex-wrap: wrap;
+  }
+}
+
+/* --- DESKTOP ONLY --- */
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* Hide menu toggle on larger screens */
+  }
+
+  nav {
+    flex-direction: row;
+    max-height: none !important;
+  }
+}
 
 /* Responsive styles for phones */
 @media (max-width: 800px) {
@@ -897,47 +881,6 @@ nav a:hover::after {
   margin: 4px 0;
   border-radius: 2px;
   transition: all 0.3s ease;
-}
-
-/* Hide nav links on small screens */
-@media (max-width: 768px) {
-  nav {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    padding: 0;
-    display: none;
-  }
-
-  nav a {
-    padding: 15px 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #eee;
-    font-size: 18px;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-}
-/* Hide menu icon on desktop */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #fff;
 }
 
 /* Mobile menu */
@@ -1529,7 +1472,7 @@ nav {
   position: sticky;
   top: 100px; /* Adjust if your header height is more or less */
   z-index: 999;
-  background-color: #d63384f; /* or any solid color for contrast */
+  background-color: #fff; /* or any solid color for contrast */
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -1543,6 +1486,4 @@ nav a {
   color: #d63384;
   font-weight: bold;
 }
-#d63384
-
 </style>
