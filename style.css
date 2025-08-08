@@ -6,8 +6,6 @@ body {
 }
 
 header {
-  position: relative;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 40px;
@@ -463,7 +461,36 @@ nav a {
   font-size: 18px;
   position: relative;
   transition: color 0.3s;
+  nav {
+    position: absolute; /* or fixed */
+    top: 100%; /* place it below the header */
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000; /* ensure it's in front */
+  }
+  
 }
+@media only screen and (max-width: 768px) {
+  nav a {
+    padding: 2px 5px; /* reduce padding */
+    font-size: 14px;   /* optional: adjust font size too */
+  }
+
+  header {
+    padding: 10px; /* reduce header padding */
+  }
+
+  .brand {
+    font-size: 18px; /* optional: shrink brand on mobile */
+  }
+
+  .menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
 
 nav a::after {
   content: '';
@@ -570,8 +597,6 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: white;
@@ -666,7 +691,7 @@ nav a:hover {
     left: 10px;
     background-color: white;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 2px;
     z-index: 999;
   }
 
@@ -1450,22 +1475,7 @@ footer {
     font-size: 16px;
   }
 }
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-image: url("5.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  border-bottom: 3px solid #ffffff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  font-weight: bold;
 
-}
 
 /* Sticky Nav Bar - just below the header */
 nav {
